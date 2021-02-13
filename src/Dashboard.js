@@ -23,7 +23,7 @@ import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import PeopleIcon from '@material-ui/icons/People';
 import SearchIcon from '@material-ui/icons/Search';
 
-
+import TitlebarGridList from './FindBrands';
 import Scoreboard from './Scoreboard.js';
 
 function Copyright() {
@@ -214,12 +214,21 @@ export default function Dashboard() {
     </ListItem>
         <Divider />
       </Drawer>
-      <main className={classes.content}>
+      {/* <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Scoreboard stats={stats}/>
         </Container>
+      </main> */}
+
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+          <TitlebarGridList/>
+        </Container>
       </main>
     </div>
+
+    
   );
 }
