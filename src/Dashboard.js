@@ -26,6 +26,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import Scoreboard from './Scoreboard.js';
 import TestImg from './test.jpg';
+import Carousel from './Carousel.js';
 
 function Copyright() {
   return (
@@ -224,6 +225,8 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Scoreboard stats={stats}/>
+
+          <Carousel />
         </Container>
       </main>
     </div>
