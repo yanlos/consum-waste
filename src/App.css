@@ -73,6 +73,14 @@ ul {
 
 .score-list {
   max-width: 50%;
+  width: 1000px;
+}
+
+.route-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .score-item {

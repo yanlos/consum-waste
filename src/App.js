@@ -27,6 +27,8 @@ import Scoreboard from './Scoreboard';
 import Dashboard from './Dashboard.js';
 import Scanner from './Scanner';
 
+import TestImg from './test.jpg';
+
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -108,6 +110,33 @@ function App() {
     setOpen(false);
   };
 
+  const [stats, setStats] = useState([
+    {
+      username: 'test1',
+      score: 50,
+      imgsrc: TestImg,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    },    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    }
+  ]);
+
   return (
     <div className={"App", classes.root}>
       <AppBar style={{ background: '#4caf50' }} position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
@@ -176,12 +205,15 @@ function App() {
         </ListItem>
         <Divider />
       </Drawer>
-      {activePage === "dashboard" ? <Dashboard /> :
-      activePage === "scanner" ? <Scanner /> :
-      // activePage === "footprint" ? <Footprint /> :
-      // activePage === "search" ? <Search /> :
-      activePage === "social" ? <Social /> :
-      null}
+
+      <div className='route-container'>
+        {activePage === "dashboard" ? <Dashboard /> :
+        activePage === "scanner" ? <Scanner /> :
+        // activePage === "footprint" ? <Footprint /> :
+        // activePage === "search" ? <Search /> :
+        activePage === "social" ? <Scoreboard stats={stats} /> :
+        null}
+      </div>
     </div>
   );
 }
