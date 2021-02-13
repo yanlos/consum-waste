@@ -152,6 +152,28 @@ export default function Dashboard() {
     }
   ]);
 
+  const DASHBOARD = 0;
+  const SCAN = 1;
+  const FOOTPRINT = 2;
+  const BRANDS = 3;
+  const SOCIAL = 4;
+  const [activePage, setActivePage] = useState(DASHBOARD);
+
+  const showRoute = () => {
+    if (activePage === DASHBOARD) {
+      return <div> Dashboard goes here </div>;
+    } else if (activePage === SCAN) {
+      return <div> Render scan page </div>;
+    } else if (activePage === FOOTPRINT) {
+      return <div> Render footprint </div>;
+    } else if (activePage === BRANDS) {
+      return <div> Render brands </div>;
+    } else if (activePage === SOCIAL) {
+      return <Scoreboard stats={stats}/>;
+    }
+    return null;
+  }
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -189,31 +211,31 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-        <ListItem button>
+    <ListItem button onClick={() => setActivePage(DASHBOARD)}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={() => setActivePage(SCAN)}>
       <ListItemIcon>
         <BackupSharpIcon />
       </ListItemIcon>
       <ListItemText primary="Scan Products" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={() => setActivePage(FOOTPRINT)}>
       <ListItemIcon>
         <FingerprintIcon />
       </ListItemIcon>
       <ListItemText primary="Your Footprint" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={() => setActivePage(BRANDS)}>
       <ListItemIcon>
         <SearchIcon />
       </ListItemIcon>
       <ListItemText primary="Find Brands" />
     </ListItem>
-    <ListItem button>
+    <ListItem button onClick={() => setActivePage(SOCIAL)}>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
@@ -224,9 +246,7 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Scoreboard stats={stats}/>
-
-          <Carousel />
+          {showRoute() !== null && showRoute()}
         </Container>
       </main>
     </div>
