@@ -200,7 +200,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background-size: cover;
 }
 
-
+#scanner {
+	margin-left: -50px;
+}
 
 .about-img {
 	
