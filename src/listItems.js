@@ -5,10 +5,15 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import ScannerIcon from '@material-ui/icons/Scanner';
+import BackupSharpIcon from '@material-ui/icons/BackupSharp';
+
+import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import PeopleIcon from '@material-ui/icons/People';
+import SearchIcon from '@material-ui/icons/Search';
 
 export const mainListItems = (
   <div>
@@ -20,25 +25,25 @@ export const mainListItems = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <BackupSharpIcon />
       </ListItemIcon>
-      <ListItemText primary="Upload" />
+      <ListItemText primary="Scan Products" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <FingerprintIcon />
+      </ListItemIcon>
+      <ListItemText primary="Your Footprint" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <SearchIcon />
+      </ListItemIcon>
+      <ListItemText primary="Find Brands" />
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Footprint" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Educate" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Social" />
     </ListItem>
