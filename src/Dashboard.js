@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -20,6 +20,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Orders from './Orders';
+
+
+import Scoreboard from './Scoreboard.js';
 
 function Copyright() {
   return (
@@ -119,6 +122,28 @@ export default function Dashboard() {
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
+  const [stats, setStats] = useState([
+    {
+      username: 'test1',
+      score: 50,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+    },    {
+      username: 'test2',
+      score: 1000,
+    }
+  ]);
+
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -163,8 +188,7 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          
-          
+          <Scoreboard stats={stats}/>
         </Container>
       </main>
     </div>

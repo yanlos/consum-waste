@@ -88,3 +88,28 @@ ul {
 
   box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
 }
+
+.score-item.gold {
+  background: gold;
+}
+
+.score-item.silver {
+  background: silver;
+}
+
+.score-item.bronze {
+  background: brown;
+}
+
+.score-item img {
+  border: 2px solid silver;
+  border-radius: 50%;
+
+  max-width: 50px;
+  width: 100%;
+  height: 50px;
+
+  overflow: hidden;
+  
+  margin-right: 15px;
+}
