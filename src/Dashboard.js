@@ -25,6 +25,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 
 import Scoreboard from './Scoreboard.js';
+import TestImg from './test.jpg';
 
 function Copyright() {
   return (
@@ -127,21 +128,26 @@ export default function Dashboard() {
     {
       username: 'test1',
       score: 50,
+      imgsrc: TestImg,
     },
     {
       username: 'test2',
       score: 1000,
+      imgsrc: TestImg,
     },
     {
       username: 'test2',
       score: 1000,
+      imgsrc: TestImg,
     },
     {
       username: 'test2',
       score: 1000,
+      imgsrc: TestImg,
     },    {
       username: 'test2',
       score: 1000,
+      imgsrc: TestImg,
     }
   ]);
 
