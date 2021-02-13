@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +43,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#navbar {
+  position: fixed;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  
+  padding-top: 100px;
+}
+
+#sidebar {
+  padding: 50px;
+}
+
+#content {
+  padding: 50px;
 }
