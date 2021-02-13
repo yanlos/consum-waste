@@ -22,10 +22,12 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
 
-import Social from './Social';
-import Scoreboard from './Scoreboard';
+// import Scoreboard from './Scoreboard';
 import Dashboard from './Dashboard.js';
 import Scanner from './Scanner';
+import FindBrands from './FindBrands';
+import Footprint from './Footprint.js';
+import Social from './Social';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -156,13 +158,13 @@ function App() {
           </ListItemIcon>
           <ListItemText primary="Scan Products" />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => setActivePage("footprint")}>
           <ListItemIcon>
             <FingerprintIcon />
           </ListItemIcon>
           <ListItemText primary="Your Footprint" />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => setActivePage("search")}>
           <ListItemIcon>
             <SearchIcon />
           </ListItemIcon>
@@ -178,8 +180,8 @@ function App() {
       </Drawer>
       {activePage === "dashboard" ? <Dashboard /> :
       activePage === "scanner" ? <Scanner /> :
-      // activePage === "footprint" ? <Footprint /> :
-      // activePage === "search" ? <Search /> :
+      activePage === "footprint" ? <Footprint /> :
+      activePage === "search" ? <FindBrands /> :
       activePage === "social" ? <Social /> :
       null}
     </div>
