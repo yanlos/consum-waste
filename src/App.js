@@ -150,7 +150,7 @@ function App() {
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={() => setActivePage("scanner")}>
           <ListItemIcon>
             <BackupSharpIcon />
           </ListItemIcon>

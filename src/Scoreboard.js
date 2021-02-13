@@ -8,7 +8,7 @@ function Scoreboard(props) {
     .sort(scoreSort)
     .map((item, i) => 
       <li> 
-        <ScoreItem {...item} rank={i+1} />
+        <ScoreItem {...item} rank={i+1}/>
       </li>
     );
 
@@ -18,13 +18,13 @@ function Scoreboard(props) {
     <ul className="score-list">
       <div className="score-item">
         <div className="header">
-          <strong> Rank </strong>
+          <strong> RANK </strong>
         </div>
         <div>
-          <strong> Username </strong>
+          <strong> USERNAME </strong>
         </div>
         <div>
-          <strong> Score </strong>
+          <strong> SCORE </strong>
         </div>
       </div>
         {toScoreboard(stats)}
