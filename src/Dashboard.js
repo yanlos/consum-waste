@@ -168,7 +168,7 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
+          <Typography component="h1" variant="h4" color="inherit" noWrap className={classes.title}>
             CONSUM WASTE
           </Typography>
           <IconButton color="inherit">

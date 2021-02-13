@@ -7,7 +7,7 @@ const Header = () => {
           <div className="overlay">
             <div className="container">
               <div className="row">
-                <div className="col-md-8 col-md-offset-2 intro-text">
+                <div className="intro-text">
                   <h1>
                     Welcome
                   </h1>
