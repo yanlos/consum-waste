@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Social from './Social';
+import Scoreboard from './Scoreboard'
 
 import Dashboard from './Dashboard.js';
 
