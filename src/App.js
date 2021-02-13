@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Social from './Social';
 import Scoreboard from './Scoreboard'
+import Features from './components/features';
 
 import Dashboard from './Dashboard.js';
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Dashboard />
-
+     
     </div>
   );
 }

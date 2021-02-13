@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, Component} from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -22,6 +22,12 @@ import BackupSharpIcon from '@material-ui/icons/BackupSharp';
 import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import PeopleIcon from '@material-ui/icons/People';
 import SearchIcon from '@material-ui/icons/Search';
+import Header from './components/header';
+import Features from './components/features';
+import About from './components/about';
+import Gallery from './components/gallery';
+import Contact from './components/contact';
+import './css/style.css';
 
 
 import Scoreboard from './Scoreboard.js';
@@ -35,6 +41,8 @@ function Copyright() {
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
+
+  
   root: {
     display: 'flex',
   },
@@ -114,6 +122,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dashboard() {
+
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -216,9 +225,17 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
+        
+        <Header/>
+        {/* <Features />
+        <About />
+        <Gallery />
+        <Contact /> */}
+        {/* <About /> */}
+        {/* <Container maxWidth="lg" className={classes.container}>
           <Scoreboard stats={stats}/>
-        </Container>
+        </Container> */}
+
       </main>
     </div>
   );
