@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
-    }),
+    })
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -78,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    position: "fixed"
   },
   drawerPaperClose: {
     overflowX: 'hidden',
@@ -99,6 +100,12 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
+  routeContainer: {
+    marginLeft: 240,
+    width: "calc(100vw - 240px)",
+    display: "flex",
+    justifyContent: "center"
+  }
 }));
 
 function App() {
@@ -208,7 +215,7 @@ function App() {
         <Divider />
       </Drawer>
 
-      <div className='route-container'>
+      <div className={classes.routeContainer}>
         {activePage === "dashboard" ? <Dashboard /> :
         activePage === "scanner" ? <Scanner /> :
         activePage === "footprint" ? <Footprint /> :
