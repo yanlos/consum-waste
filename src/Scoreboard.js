@@ -1,5 +1,6 @@
 import React from 'react';
 import ScoreItem from './ScoreItem.js';
+import './css/style.css'
 
 function Scoreboard(props) {
   const stats = props.stats;

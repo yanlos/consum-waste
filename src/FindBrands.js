@@ -118,7 +118,7 @@ export default function TitlebarGridList() {
     const classes = useStyles();
 
     return (
-        <main>
+        <main id="main-findBrands">
             {/* <h2 style="color: red">
             Our Featured Sustainable Products
 
