@@ -25,6 +25,7 @@ import Typography from '@material-ui/core/Typography';
 import Social from './Social';
 import Scoreboard from './Scoreboard';
 import Dashboard from './Dashboard.js';
+import Scanner from './Scanner';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -176,7 +177,7 @@ function App() {
         <Divider />
       </Drawer>
       {activePage === "dashboard" ? <Dashboard /> :
-      // activePage === "scanner" ? <Scanner /> :
+      activePage === "scanner" ? <Scanner /> :
       // activePage === "footprint" ? <Footprint /> :
       // activePage === "search" ? <Search /> :
       activePage === "social" ? <Social /> :
