@@ -43,7 +43,7 @@ function getItem(upc) {
 
 const Scanner = ({ onDetected, scannerRef }) => {
   const errorCheck = useCallback(result => {
-    if (getMedianOfCodeErrors(result.codeResult.decodedCodes) < 0.05) onDetected(result.codeResult.code);
+    if (getMedianOfCodeErrors(result.codeResult.decodedCodes) < 0.01) onDetected(result.codeResult.code);
   }, [onDetected]);
 
   const handleProcessed = result => {
