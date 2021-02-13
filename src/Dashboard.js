@@ -23,7 +23,7 @@ import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import PeopleIcon from '@material-ui/icons/People';
 import SearchIcon from '@material-ui/icons/Search';
 
-import TitlebarGridList from './FindBrands';
+import TitlebarGridList from './FindBrands'
 import Scoreboard from './Scoreboard.js';
 
 function Copyright() {
