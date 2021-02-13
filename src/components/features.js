@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../css/style.css';
 
 const data = [{
   "icon": "fa fa-comments-o",
@@ -26,21 +27,23 @@ const features = () => {
 
     return (
       <div id="features" className="text-center">
-        <div className="container">
-          <div className="section-title">
-            <h2>Features</h2>
-          </div>
-          <div className="row"  className="col-md-8 col-md-offset-2 section-title">
-            {data
-              ? data.map((d,i) => (
-                  <div  key={`${d.title}-${i}`}className="col-xs-6 col-md-3">
-                    {" "}
-                    <i className={d.icon}></i>
-                    <h3>{d.title}</h3>
-                    <p>{d.text}</p>
-                  </div>
-                ))
-              : "Loading..."}
+        <div className="img-features">
+          <div className="container">
+            <div className="section-title">
+              <h2 style={{color: "white"}}>Features</h2>
+            </div>
+            <div className="row"  className="col-md-8 col-md-offset-2 section-title">
+              {data
+                ? data.map((d,i) => (
+                    <div  key={`${d.title}-${i}`}className="col-xs-6 col-md-3">
+                      {" "}
+                      <i className={d.icon}></i>
+                      <h3 style={{color: "white"}}>{d.title}</h3>
+                      <p>{d.text}</p>
+                    </div>
+                  ))
+                : "Loading..."}
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import '../css/style.css';
 
 const data = {
   "address": "4321 California St, San Francisco, CA 12345 ",
@@ -14,8 +14,8 @@ export class Contact extends Component {
   render() {
     return (
       <div>
-        <div id="contact">
-          <div className="container">
+        {/* <div id="contact">
+          <div className="container"> */}
             {/* <div className="col-md-8">
               <div className="row"> */}
                 {/* <div className="section-title">
@@ -97,9 +97,9 @@ export class Contact extends Component {
                 </p>
               </div>
             </div> */}
-            <div className="col-md-12">
-              <div className="row">
-                <div className="social">
+            {/* <div className="col-md-12"> */}
+              {/* <div className="row"> */}
+                {/* <div className="social">
                   <ul>
                     <li>
                       <a
@@ -119,11 +119,13 @@ export class Contact extends Component {
                       </a>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div> */}
+              {/* </div> */}
+            {/* </div> */}
+          {/* </div>
+        </div> */}
+
+        
         <div id="footer">
           <div className="container text-center">
             <p>

@@ -227,14 +227,14 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         
         <Header/>
-        {/* <Features />
+         <Features />
         <About />
         <Gallery />
-        <Contact /> */}
-        {/* <About /> */}
-        {/* <Container maxWidth="lg" className={classes.container}>
+        <Contact /> 
+
+         {/* <Container maxWidth="lg" className={classes.container}>
           <Scoreboard stats={stats}/>
-        </Container> */}
+        </Container>  */}
 
       </main>
     </div>

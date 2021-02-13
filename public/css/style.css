@@ -52,8 +52,8 @@ ul, ol {
 }
 ul, ol {
 	padding: 0;
-	webkit-padding: 0;
-	moz-padding: 0;
+	/* webkit-padding: 0;
+	moz-padding: 0; */
 }
 hr {
 	height: 2px;
@@ -130,6 +130,7 @@ hr {
 	background-color: #608dfd;
 }
 .section-title {
+	color: white;
 	margin-bottom: 70px;
 }
 .section-title h2 {
@@ -224,8 +225,16 @@ header .intro-text {
 }
 /* Features Section */
 #features {
+	width: 100%;
+	background: url(../img/bg2.jpg) center center no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
 	padding: 100px 0;
 	background: #f6f6f6;
+
 }
 #features i.fa {
 	font-size: 38px;
@@ -367,7 +376,7 @@ header .intro-text {
 }
 .hover-bg:hover .hover-text>h4 {
 	opacity: 1;
-	-webkit-backface-visibility: hidden;
+	/* -webkit-backface-visibility: hidden; */
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }

@@ -194,6 +194,18 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background-size: cover;
 	-o-background-size: cover;
 }
+
+#about {
+	color: white;
+	background: url('https://i.redd.it/55hg8youpru21.jpg') center center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.about-img {
+	
+	background-attachment: fixed;
+}
 .intro .overlay {
 	background: rgba(0,0,0,0.2);
 }
@@ -224,9 +236,41 @@ header .intro-text {
 	text-align: center;
 }
 /* Features Section */
-#features {
+
+/* .img-features {
+	display: block;
+	min-width: 100px;
+	min-height: 300px;
+	background: url('https://i.pinimg.com/originals/f1/ba/78/f1ba78c7eb9f547e8afc7455fd1f1544.png') center center no-repeat;
+
+	min-height: 200px;
+	min-width: 1200px;
+	box-shadow: 0px 0px 1px 10px grey;
+
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
 	padding: 100px 0;
 	background: #f6f6f6;
+} */
+#features {
+	
+	/* box-shadow: 0px 0px 1px 10px grey; */
+	min-height: 200px;
+	min-width: 1200px;
+	width: 100%;
+	background: url('https://www.wallpapertip.com/wmimgs/60-604584_auroral-forest.jpg') center center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	
+	-o-background-size: cover;
+	padding: 100px 0;
+	/* background: #f6f6f6; */
 }
 #features i.fa {
 	font-size: 38px;
@@ -263,6 +307,7 @@ header .intro-text {
 	left: 0;
 }
 #about .about-text li {
+	
 	margin-bottom: 6px;
 	margin-left: 6px;
 	list-style: none;
@@ -332,6 +377,8 @@ header .intro-text {
 }
 /* Portfolio Section */
 #portfolio {
+	background: url(https://wallpaperaccess.com/full/3390922.jpg) center center no-repeat;
+	background-attachment: fixed;
 	padding: 100px 0;
 }
 .portfolio-item {
@@ -438,10 +485,10 @@ header .intro-text {
 	background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
 	color: rgba(255,255,255,.75);
 }
-#contact .section-title {
+/* #contact .section-title {
 	margin-bottom: 40px;
-}
-#contact .section-title p {
+} */
+/* #contact .section-title p {
 	font-size: 16px;
 }
 #contact h2 {
@@ -458,18 +505,18 @@ header .intro-text {
 	width: 60px;
 	bottom: 0;
 	left: 30px;
-}
-#contact h3 {
+} */
+/* #contact h3 {
 	color: #fff;
 	margin-top: 80px;
 	margin-bottom: 25px;
 	padding-bottom: 20px;
 	font-weight: 400;
-}
-#contact form {
+} */
+/* #contact form {
 	padding-top: 20px;
-}
-#contact .text-danger {
+} */
+/* #contact .text-danger {
 	color: #cc0033;
 	text-align: left;
 }
@@ -487,8 +534,8 @@ label {
 	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
 	float: left;
-}
-#contact .form-control {
+} */
+/* #contact .form-control {
 	display: block;
 	width: 100%;
 	padding: 6px 12px;
@@ -504,8 +551,8 @@ label {
 	-webkit-transition: none;
 	-o-transition: none;
 	transition: none;
-}
-#contact .form-control:focus {
+} */
+/* #contact .form-control:focus {
 	border-color: #999;
 	outline: 0;
 	-webkit-box-shadow: transparent;
@@ -530,14 +577,14 @@ color: #777;
 	color: rgba(255,255,255,1);
 	margin-bottom: 10px;
 	display: block;
-}
+} */
 #contact .contact-item i.fa {
 	margin-right: 10px;
 }
 #contact .social {
-	border-top: 1px solid rgba(255,255,255,0.15);
+	/* border-top: 1px solid rgba(255,255,255,0.15);
 	padding-top: 50px;
-	margin-top: 50px;
+	margin-top: 50px; */
 	text-align: center;
 }
 #contact .social ul li {

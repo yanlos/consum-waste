@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../css/style.css'
 
 export class Gallery extends Component {
   render() {
@@ -6,7 +7,7 @@ export class Gallery extends Component {
       <div id="portfolio" className="text-center">
         <div className="container">
           <div className="section-title">
-            <h2>Featured Products</h2>
+            <h2 style={{color: "white"}}>Featured Products</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
               dapibus leonec.
