@@ -1,7 +1,5 @@
 import React from 'react';
 
-import TestImg from './test.jpg';
-
 function ScoreItem(props) {
   const getTopThree = () => {
     const rank = props.rank;
@@ -24,7 +22,7 @@ function ScoreItem(props) {
 
        {/* TODO: link to user profile, profile pic */}
       <a href="#test">
-        <img src={TestImg}/>
+        <img src={props.imgsrc}/>
         {props.username}
       </a>
 
