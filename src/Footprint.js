@@ -10,7 +10,6 @@ import About from './components/about';
 import Products from './components/gallery';
 import Contact from './components/contact';
 
-import TitlebarGridList from './FindBrands'
 import Scoreboard from './Scoreboard.js';
 import TestImg from './test.jpg';
 
@@ -73,13 +72,6 @@ export default function Footprint() {
       <Features />
       <About />
       <Products />
-      <CssBaseline />
-      <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <TitlebarGridList/>
-        </Container>
-      </main>
       <Contact />
     </div>
   );
