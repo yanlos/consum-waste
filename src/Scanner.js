@@ -41,7 +41,7 @@ function Scanner({ setActivePage, setItem }) {
   return (
     <main>
     <div class={classes.scanner}>
-      <h2> Hold barcode up to scanner:</h2>
+      {/* <h2 style={{ color: 'green', fontFamily:'"Montserrat"' }}> Hold barcode up to scanner:</h2> */}
 
       <div ref={scannerRef} style={{position: "relative"}}>
         <canvas className="drawingBuffer" style={{

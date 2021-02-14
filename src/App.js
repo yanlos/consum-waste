@@ -37,10 +37,15 @@ import P3 from './pexels-p3.jpg';
 import P4 from './pexels-p4.jpg';
 import P5 from './pexels-p5.jpg';
 
+import "typeface-montserrat";
+
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    fontFamily: "typeface-montserrat"
+    
+
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -182,8 +187,8 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h4" color="inherit" noWrap className={classes.title}>
-            EMission
+          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title}>
+            The Green Revolution
           </Typography>
         </Toolbar>
       </AppBar>
