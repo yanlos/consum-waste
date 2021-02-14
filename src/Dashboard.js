@@ -41,7 +41,7 @@ const data01 = [
 
 const renderPieChart = (
   <PieChart width={200} height={200}>
-    <Pie 
+    <Pie
       data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} innerRadius={10} fill="#4287f5" label
     >
         {data.map((entry,index) => <Cell fill={COLORS[index % COLORS.length]}/>)}
@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    height: '100vh',
+    // height: '100vh',
     overflow: 'auto'
   },
   container: {

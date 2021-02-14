@@ -58,7 +58,7 @@ const items = {
 const useStyles = makeStyles(theme => ({
   backgroundContainer: {
     width: "100vw",
-    height: "500vh",
+    height: "300vh",
     position: "relative"
   },
   background: {
@@ -140,7 +140,7 @@ export default function Footprint({ item }) {
           <div class={classes.chunk} style={{fontSize: 66}}><span class={classes.item}>{item}</span> is a sustainable item!</div>}
         <div class={classes.chunk}>
           {/* <div>This product releases {items[item].co2} ounces of CO<sub>2</sub> into the environment</div> */}
-          {items[item].recycle ? <div>You can <span style={{textDecoration: "underline"}}>{items[item].recycle}</span> this item in a <span style={{color: "#1976d2"}}> blue bin</span></div> :
+          {items[item].recycle ? <div>You can <span style={{textDecoration: "underline"}}>{items[item].recycle}</span> this item in a <span style={{color: "#1996e2"}}> blue bin</span></div> :
             <div>This item is <span style={{textDecoration: "underline"}}>not</span> recyclable</div>}
         </div>
         <div class={classes.carbonFootprint}>
@@ -154,7 +154,7 @@ export default function Footprint({ item }) {
         <div class={classes.chunk} style={{marginTop: 120}}>
 
         {/* //if its a bad product it'll say here are other options, if its good gives you facts */}
-          <div>{items[item].instead}</div>  
+          <div>{items[item].instead}</div>
           <br>
           </br>
 
