@@ -32,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Footprint({ item }) {
+export default function Footprint(props) {
 
   const classes = useStyles();
   // TODO: Load leaderboard stats here
   useEffect(() => {
     console.log('loading stats');
   }, []);
-  console.log(item)
+  console.log(props.item)
   const [stats, setStats] = useState([
     {
       username: 'test1',
@@ -66,6 +66,12 @@ export default function Footprint({ item }) {
       imgsrc: TestImg,
     }
   ]);
+
+  useEffect(() => {
+    if (!props.item) {
+      props.setActivePage("scanner");
+    }
+  });
 
   return (
     <div>

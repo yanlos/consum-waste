@@ -219,7 +219,7 @@ function App() {
       <div className={classes.routeContainer}>
         {activePage === "dashboard" ? <Dashboard /> :
         activePage === "scanner" ? <Scanner setActivePage={setActivePage} setItem={setItem} /> :
-        activePage === "footprint" ? <Footprint item={item} /> :
+        activePage === "footprint" ? <Footprint setActivePage={setActivePage} item={item} /> :
         activePage === "search" ? <FindBrands /> :
         activePage === "social" ? <Scoreboard stats={stats} /> :
         null}

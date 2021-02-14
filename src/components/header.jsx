@@ -9,7 +9,7 @@ const Header = () => {
               <div className="row">
                 <div className="intro-text">
                   <h1>
-                    Welcome
+                    Your Footprint
                   </h1>
                   <p>
                     {"This is a landing page"}
