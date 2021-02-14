@@ -111,7 +111,8 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
-  const [activePage, setActivePage] = useState({ value: "dashboard" });
+  const [activePage, setActivePage] = useState("dashboard");
+  const [item, setItem] = useState();
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -217,8 +218,8 @@ function App() {
 
       <div className={classes.routeContainer}>
         {activePage === "dashboard" ? <Dashboard /> :
-        activePage === "scanner" ? <Scanner /> :
-        activePage === "footprint" ? <Footprint /> :
+        activePage === "scanner" ? <Scanner setActivePage={setActivePage} setItem={setItem} /> :
+        activePage === "footprint" ? <Footprint item={item} /> :
         activePage === "search" ? <FindBrands /> :
         activePage === "social" ? <Scoreboard stats={stats} /> :
         null}

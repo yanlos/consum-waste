@@ -1,14 +1,14 @@
 import { useCallback, useLayoutEffect } from 'react';
 import Quagga from '@ericblade/quagga2';
-import https from 'https';
-const apiOptions = {
-  hostname: "api.upcitemdb.com",
-  path: "/prod/trial/lookup",
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json"
-  }
-}
+// import https from 'https';
+// const apiOptions = {
+//   hostname: "api.upcitemdb.com",
+//   path: "/prod/trial/lookup",
+//   method: "GET",
+//   headers: {
+//     "Content-Type": "application/json"
+//   }
+// }
 
 function getMedian(array) {
   array.sort((a, b) => a - b);
@@ -31,13 +31,12 @@ function getItem(upc) {
   // request.on("error", error => console.log(error));
   // request.write(`{ "upc": "${ upc }" }`);
   // request.end();
-  switch (upc) {
-    case "123456789": return "item1";
+  switch (upc.slice(1)) {
+    case "096619855124": return "water bottle";
     case "123456788": return "item2";
     case "123456787": return "item3";
     case "123456786": return "item4";
     case "123456785": return "item5";
-    default: return "Item not found";
   }
 }
 
@@ -61,10 +60,9 @@ const Scanner = ({ onDetected, scannerRef }) => {
     if (result?.box) {
       Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, { color: "blue", lineWidth: 2 });
       if (result?.codeResult?.code) {
-        // This is where we get the product code
-        console.log(result.codeResult.code);
-        console.log(getItem(result.codeResult.code));
-        onDetected(result.codeResult.code);
+        console.log(result.codeResult.code)
+        const item = getItem(result.codeResult.code);
+        if (item) onDetected(item);
       }
     }
   };

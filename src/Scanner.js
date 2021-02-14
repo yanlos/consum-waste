@@ -17,9 +17,14 @@ const buttonStyle = {
 };
 
 
-function Scanner() {
+function Scanner({ setActivePage, setItem }) {
   const [scanning, setScanning] = useState(false);
   const scannerRef = useRef(null);
+  const handleItem = item => {
+    setScanning(false);
+    setActivePage("footprint");
+    setItem(item);
+  }
 
   return (
     <main>
@@ -44,12 +49,12 @@ function Scanner() {
       </div>
       <div ref={scannerRef} style={{position: "relative"}}>
         <canvas className="drawingBuffer" style={{
-  
+          position: "absolute",
           margin: "auto",
           position: "absolute",
           border: 'solid green',
         }} width="640" height="480" />
-        {scanning ? <Camera scannerRef={scannerRef} onDetected={result => setScanning(false)} /> : null}
+        {scanning ? <Camera scannerRef={scannerRef} onDetected={item => handleItem(item)} /> : null}
       </div>
       
       <Button 

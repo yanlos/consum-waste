@@ -32,13 +32,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function Footprint() {
+export default function Footprint({ item }) {
 
   const classes = useStyles();
   // TODO: Load leaderboard stats here
   useEffect(() => {
     console.log('loading stats');
   }, []);
+  console.log(item)
   const [stats, setStats] = useState([
     {
       username: 'test1',
