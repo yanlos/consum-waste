@@ -6,10 +6,10 @@ import Container from '@material-ui/core/Container';
 
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, PieChart, Pie, ResponsiveContainer } from 'recharts';
 const data = [
-  {name: '2018', emissions: 390, pv: 2400, amt: 2400},
-  {name: '2019', emissions: 350, pv: 2400, amt: 2400},
-  {name: '2020', emissions: 270, pv: 2400, amt: 2400},
-  {name: '2021', emissions: 198, pv: 2400, amt: 2400},
+  {name: 'November', emissions: 180, pv: 2400, amt: 2400},
+  {name: 'December', emissions: 210, pv: 2400, amt: 2400},
+  {name: 'January', emissions: 270, pv: 2400, amt: 2400},
+  {name: 'February', emissions: 400, pv: 2400, amt: 2400},
 ];
 
 const renderLineChart = (
@@ -24,16 +24,16 @@ const renderLineChart = (
 
 const data01 = [
   {
-    "name": "Carbon Efficient",
-    "value": 40
+    "name": "Friendly",
+    "value": 52
   },
   {
-    "name": "Group B",
-    "value": 30
+    "name": "Landfill",
+    "value": 23
   },
   {
-    "name": "Group C",
-    "value": 30
+    "name": "Nuetral",
+    "value": 25
   }
 ];
 
@@ -73,12 +73,12 @@ export default function Dashboard() {
       <h1 style={{color: 'green'}}>Your Current Report</h1>
       <div style={{position: 'relative', padding: '50px', background: 'white'}}>
         <div style={{display: 'flex', alignItems:'center'}}>
-          <h2>Yearly Emissions</h2>
+          <h3>CO2 Conserved (oz)</h3>
           {renderLineChart}
         </div>
 
         <div style={{display: 'flex', alignItems:'center'}}>
-          <h2>Breakdown by Percentage</h2>
+          <h2>Type Of Packaging Scanned</h2>
           {renderPieChart}
         </div>
       </div>
