@@ -36,7 +36,7 @@ const data01 = [
     "value": 30
   }
 ];
-    
+
 const renderPieChart = (
   <PieChart width={200} height={200}>
     <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#4287f5" label/>
@@ -55,8 +55,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     height: '100vh',
-    overflow: 'auto',
-    // color: 'white',
+    overflow: 'auto'
   },
   container: {
     paddingTop: theme.spacing(4),
@@ -84,18 +83,18 @@ export default function Dashboard() {
         </div>
       </div>
       <img style={{maxWidth: '100%'}} src='./img/bg2.jpg'/>
-      <div class={classes.container}> 
+      <div class={classes.container}>
         <div class={classes.content}>
           <h1 style={{ color: 'green'}}>Our Mission</h1>
           <p>
-            To promote environmentally friendly brands to a group of environmentally concerned customers, 
+            To promote environmentally friendly brands to a group of environmentally concerned customers,
             by so doing encourage companies that do not use sustainable packaging to make the switch.
           </p>
 
           <h2 style={{ color: 'green'}}> Features </h2>
           <p>
-            Barcode Scanning: Simply scan the barcode on the back of your product to learn 
-            more details about the product, such as packaging, CO2 emission levels, and 
+            Barcode Scanning: Simply scan the barcode on the back of your product to learn
+            more details about the product, such as packaging, CO2 emission levels, and
             potential more eco-friendly alternatives!
           </p>
         </div>
