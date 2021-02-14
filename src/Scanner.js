@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import Camera from './Camera';
 import './css/style.css'
@@ -13,11 +14,21 @@ const buttonStyle = {
   padding: "30px",
   fontWeight: "bold",
   background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
-  justifyContent: 'center',
+  justifyContent: 'center'
 };
+const useStyles = makeStyles(theme => ({
+  scanner: {
+    marginTop: 100,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column"
+  }
+}));
 
 
 function Scanner({ setActivePage, setItem }) {
+  const classes = useStyles();
   const [scanning, setScanning] = useState(false);
   const scannerRef = useRef(null);
   const handleItem = item => {
@@ -28,41 +39,19 @@ function Scanner({ setActivePage, setItem }) {
 
   return (
     <main>
-
-      
-    <div id="scanner">
-
-      <div>
-        " "
-      </div>
-      <div>
-        " "
-      </div>
-      <div>
-        " "
-      </div>
-      <div>
-        " "
-      </div>
-      <div>
-        " "
-      </div>
+    <div class={classes.scanner}>
       <div ref={scannerRef} style={{position: "relative"}}>
         <canvas className="drawingBuffer" style={{
-          position: "absolute",
-          margin: "auto",
-          position: "absolute",
-          border: 'solid green',
-        }} width="640" height="480" />
+          position: "absolute"
+        }} />
         {scanning ? <Camera scannerRef={scannerRef} onDetected={item => handleItem(item)} /> : null}
       </div>
-      
-      <Button 
+
+      <Button
         onClick={() => setScanning(!scanning) }
-        variant="contained" 
-        style={{marginTop: 30}}  
-        style={buttonStyle} 
-        
+        variant="contained"
+        style={{marginTop: 130}}
+        style={buttonStyle}
         >
           {scanning ? 'Stop Scanning' : 'Start Scanning'}
       </Button>
