@@ -6,7 +6,6 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
-// import tileData from './tileData';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -80,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'rgba(255, 255, 255, 0.54)',
     },
 
-    
+
 }));
 
 const top10Products = [
@@ -94,7 +93,7 @@ const top10Products = [
     { title: 'Foods & Snacks'},
     { title: 'Furniture'},
     { title: 'Environmentally Friendly Brands'},
-    
+
 ]
 
 /**
@@ -133,7 +132,7 @@ export default function TitlebarGridList() {
                     {/* <GridListTile key="Subheader" cols={2} style={{ height: 'auto', background: '#357a38' }}>
                         {/* <ListSubheader className = {classes.words} component="div">Our Featured Sustainable Products</ListSubheader> */}
                         {/* <Typography component="h1"> Our Featured Sustainable Products </Typography> */}
-                    {/* </GridListTile> */} 
+                    {/* </GridListTile> */}
                     {tileData.map((tile) => (
                         <GridListTile key={tile.img}>
                             <img src={tile.img} alt={tile.title} />
@@ -164,7 +163,7 @@ export default function TitlebarGridList() {
           <TextField {...params} label="search" margin="normal" variant="outlined" />
         )}
       />
-      
+
     </div>
         </main>
 

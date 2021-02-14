@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dashboard() {
-
   const classes = useStyles();
   // TODO: Load leaderboard stats here
   useEffect(() => {
