@@ -30,8 +30,51 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+<<<<<<< HEAD
 export default function Footprint({ item }) {
   const classes = useStyles();
+=======
+export default function Footprint(props) {
+
+  const classes = useStyles();
+  // TODO: Load leaderboard stats here
+  useEffect(() => {
+    console.log('loading stats');
+  }, []);
+  console.log(props.item)
+  const [stats, setStats] = useState([
+    {
+      username: 'test1',
+      score: 50,
+      imgsrc: TestImg,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    },
+    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    },    {
+      username: 'test2',
+      score: 1000,
+      imgsrc: TestImg,
+    }
+  ]);
+>>>>>>> 5d62d46e7983814c30bc3de8cb3b2cc23f8281ba
+
+  useEffect(() => {
+    if (!props.item) {
+      props.setActivePage("scanner");
+    }
+  });
 
   return (
     <div class={classes.backgroundContainer}>

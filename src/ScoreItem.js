@@ -1,5 +1,7 @@
 import React from 'react';
 
+import DefaultImg from './default.png';
+
 function ScoreItem(props) {
   const getTopThree = () => {
     const rank = props.rank;
@@ -22,7 +24,7 @@ function ScoreItem(props) {
 
        {/* TODO: link to user profile, profile pic */}
       <a href="#test">
-        <img src={props.imgsrc}/>
+        <img src={props.imgsrc ? props.imgsrc : DefaultImg}/>
         {props.username}
       </a>
 
