@@ -20,8 +20,9 @@ import greats from './Ourbrands/greats.png';
 import nuggets from './Ourbrands/nuggets.jpg';
 import regrained from './Ourbrands/Regrained.jpeg';
 import bobo from './Ourbrands/bobo.png';
-import barnana from './Ourbrands/barnana.jpeg'
+import snack1 from './Ourbrands/snack1.PNG'
 import organics from './Ourbrands/organics.jpg'
+import hazelnut from './Ourbrands/hazelnut.jpg'
 import "typeface-montserrat";
 import "typeface-roboto";
 import "./App.css";
@@ -52,14 +53,14 @@ const tileData = [
         author: 'Recycled Plastic, Plant Based Ingredients',
     },
     {
-        img: barnana,
-        title: 'Barnana',
-        author: 'Chewy banana snacks'
-    },
-    {
         img: organics,
         title: 'Organic Basics',
         author: 'Organic cotton, 100% eco-certified'
+    },
+    {
+        img: snack1,
+        title: 'Nature\’s Path',
+        author: 'Made in a zero-waste facility'
     }
 ];
 
@@ -99,14 +100,15 @@ const snacks = [
         author: 'Tasty snack bars from upcycled grains'
     },
     {
-        img: bobo,
-        title: 'Bobo’s',
+        img: hazelnut,
+        title: 'Justin\'s',
         author: 'Made with clean and simple organic ingredients'
     },
+
     {
-        img: barnana,
-        title: 'Barnana',
-        author: 'Chewy banana snacks'
+        img: snack1,
+        title: 'Nature\’s Path',
+        author: 'Made in a zero-waste facility'
     }
 
 ]
