@@ -14,8 +14,6 @@ import allbirds from './Ourbrands/allbirds.jpg';
 import yttp from './Ourbrands/YTTP.png';
 import lbp from './Ourbrands/lbp.png';
 
-
-
 const tileData = [
     {
         img: allbirds,
