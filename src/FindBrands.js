@@ -13,6 +13,10 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import allbirds from './Ourbrands/allbirds.jpg';
 import yttp from './Ourbrands/YTTP.png';
 import lbp from './Ourbrands/lbp.png';
+import "typeface-montserrat"
+import "typeface-roboto"
+
+
 
 const tileData = [
     {
@@ -121,9 +125,13 @@ export default function TitlebarGridList() {
 
         </h2> */}
 
-        <h1 style={{ color: 'green', fontFamily:'"Helvetica Neue"' }}>Our Featured Sustainable Products</h1>
+<br>
+            </br>
+            <br>
+            </br>
 
-        {/* <h2 class="red-text" style="color: red;">CatPhotoApp</h2> */}
+        <h1 style={{ color: 'green', fontFamily:'"Montserrat"' }}>Our Featured Sustainable Products</h1>
+
 
             <div className={classes.root}>
                 <GridList cellHeight={180} className={classes.gridList}>
@@ -148,8 +156,9 @@ export default function TitlebarGridList() {
                 </GridList>
             </div>
 
-
-            <h1 id="search-own" style={{ color: 'green', fontFamily:'"Helvetica Neue"' }}>Or Search For Your Own</h1>
+            <br>
+            </br>
+            <h1 id="search-own" style={{ color: 'green', fontFamily:'"Montserrat"' }}>Or Search For Your Own</h1>
 
 
     <div style={{ width: 300 }}>
@@ -158,7 +167,7 @@ export default function TitlebarGridList() {
         freeSolo
         options={top10Products.map((option) => option.title)}
         renderInput={(params) => (
-          <TextField {...params} label="search" margin="normal" variant="outlined" />
+          <TextField {...params} label="Environmentally Friendly" margin="normal" variant="outlined" />
         )}
       />
 

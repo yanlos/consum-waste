@@ -96,6 +96,8 @@ ul {
   box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
 
   margin-bottom: 10px;
+
+  font-size: 1vw;
 }
 
 .score-item.gold {
@@ -111,6 +113,10 @@ ul {
 }
 
 .score-item a {
+  color: black;
+}
+
+.score-item a:visited {
   color: black;
 }
 

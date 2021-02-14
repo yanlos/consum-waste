@@ -29,11 +29,21 @@ import Footprint from './Footprint.js';
 import Social from './Social';
 
 import TestImg from './test.jpg';
+import Pic from './pic2.jpg';
+
+import P1 from './pexels-p1.jpg';
+import P2 from './pexels-p2.jpg';
+import P3 from './pexels-p3.jpg';
+import P4 from './pexels-p4.jpg';
+import P5 from './pexels-p5.jpg';
+
+import "typeface-montserrat";
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    fontFamily: "typeface-montserrat"
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -104,7 +114,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 64,
     width: "calc(100vw - 240px)",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "#FAFAFA"
   }
 }));
 
@@ -112,7 +123,7 @@ function App() {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
   const [activePage, setActivePage] = useState("dashboard");
-  const [item, setItem] = useState();
+  const [item, setItem] = useState("water bottle");
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -122,33 +133,48 @@ function App() {
 
   const [stats, setStats] = useState([
     {
-      username: 'test1',
+      username: 'test',
       score: 50,
       imgsrc: TestImg,
     },
     {
       username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
+      score: 683,
     },
     {
       username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
+      score: 729,
+      imgsrc: Pic,
     },
     {
       username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    },    {
+      score: 497,
+      imgsrc: P1,
+    },
+    {
       username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
+      score: 75,
+      imgsrc: P2,
+    },
+    {
+      username: 'test2',
+      score: 516,
+      imgsrc: P3,
+    },
+    {
+      username: 'test2',
+      score: 250,
+      imgsrc: P4,
+    },
+    {
+      username: 'test2',
+      score: 333,
+      imgsrc: P5,
     }
   ]);
 
   return (
-    <div className={"App", classes.root}>
+    <div className={"App", classes.root} >
       <AppBar style={{ background: '#4caf50' }} position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -160,8 +186,8 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h4" color="inherit" noWrap className={classes.title}>
-            CONSUM WASTE
+          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title} style={{fontFamily:'"Montserrat"' }}>
+            The Green Revolution
           </Typography>
         </Toolbar>
       </AppBar>
@@ -172,11 +198,18 @@ function App() {
         }}
         open={open}
       >
+
+
+
         <div className={classes.toolbarIcon}>
           <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon />
+            <ChevronLeftIcon  />
           </IconButton>
         </div>
+
+
+
+
         <Divider />
         <ListItem button onClick={() => setActivePage("dashboard")}>
           <ListItemIcon>
@@ -214,7 +247,7 @@ function App() {
       <div className={classes.routeContainer}>
         {activePage === "dashboard" ? <Dashboard /> :
         activePage === "scanner" ? <Scanner setActivePage={setActivePage} setItem={setItem} /> :
-        activePage === "footprint" ? <Footprint item={item} /> :
+        activePage === "footprint" ? <Footprint setActivePage={setActivePage} item={item} /> :
         activePage === "search" ? <FindBrands /> :
         activePage === "social" ? <Scoreboard stats={stats} /> :
         null}

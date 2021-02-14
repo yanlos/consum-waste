@@ -8,6 +8,8 @@ import clsx from 'clsx';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
+import Impact from './impact.png';
+
 const buttonStyle = {
   fontSize: "20px",
   padding: "30px",
@@ -39,6 +41,8 @@ function Scanner({ setActivePage, setItem }) {
   return (
     <main>
     <div class={classes.scanner}>
+      {/* <h2 style={{ color: 'green', fontFamily:'"Montserrat"' }}> Hold barcode up to scanner:</h2> */}
+
       <div ref={scannerRef} style={{position: "relative"}}>
         <canvas className="drawingBuffer" style={{
           position: "absolute"
@@ -54,6 +58,8 @@ function Scanner({ setActivePage, setItem }) {
         >
           {scanning ? 'Stop Scanning' : 'Start Scanning'}
       </Button>
+
+      <img src={Impact} alt="How to make an impact"/>
     </div>
     </main>
   );

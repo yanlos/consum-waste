@@ -1,14 +1,5 @@
 import { useCallback, useLayoutEffect } from 'react';
 import Quagga from '@ericblade/quagga2';
-// import https from 'https';
-// const apiOptions = {
-//   hostname: "api.upcitemdb.com",
-//   path: "/prod/trial/lookup",
-//   method: "GET",
-//   headers: {
-//     "Content-Type": "application/json"
-//   }
-// }
 
 function getMedian(array) {
   array.sort((a, b) => a - b);
@@ -24,13 +15,6 @@ function getMedianOfCodeErrors(decodedCodes) {
 }
 
 function getItem(upc) {
-  // const request = https.request(apiOptions, response => {
-  //   console.log(response)
-  //   response.on("data", chunk => console.log(chunk));
-  // });
-  // request.on("error", error => console.log(error));
-  // request.write(`{ "upc": "${ upc }" }`);
-  // request.end();
   switch (upc.slice(1)) {
     case "096619855124": return "water bottle";
     case "123456788": return "item2";
