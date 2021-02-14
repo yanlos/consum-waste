@@ -96,12 +96,12 @@ const snacks = [
     {
         img: regrained,
         title: 'Regrained',
-        author: 'tasty snack bars from upcycled grains'
+        author: 'Tasty snack bars from upcycled grains'
     },
     {
         img: bobo,
         title: 'Bobo’s',
-        author: ' made with clean and simple organic ingredients'
+        author: 'Made with clean and simple organic ingredients'
     },
     {
         img: barnana,
