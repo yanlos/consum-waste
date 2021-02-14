@@ -283,6 +283,7 @@ export default function TitlebarGridList() {
 
 
     return (
+        <div id="findBrands">
         <main id="main-findBrands">
             {/* <h2 style="color: red">
             Our Featured Sustainable Products
@@ -338,7 +339,9 @@ export default function TitlebarGridList() {
         
       />
       
-      {displayProduct(product)}
+      <div id="search-products">
+        {displayProduct(product)}
+      </div>
 {/* {
     <Button
             type="submit"
@@ -353,6 +356,6 @@ export default function TitlebarGridList() {
 
     </div>
         </main>
-
+        </div>
     );
 }

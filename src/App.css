@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+/* #findBrands {
+  background: url('https://images.all-free-download.com/images/graphicthumb/green_trees_landscape_vector_286567.jpg') center center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+} */
+
+#search-products {
+  margin-top: 5px;
+}
+
 a {
   text-decoration: none;
 }
