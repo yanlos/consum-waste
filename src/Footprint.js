@@ -10,11 +10,13 @@ const items = {
     alternatives: [
       {
         name: "boxed water",
-        advantage: "releases 0.2 ounces of C02"
+        advantage: "releases 0.2 ounces of C02",
+        image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066"
       },
       {
         name: "boxed water",
-        advantage: "no C02 emissions and 92% recyclable "
+        advantage: "no C02 emissions and 92% recyclable",
+        image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066"
       }
     ]
   }
@@ -35,9 +37,16 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: "url(./intro-bg.jpg)",
     filter: "brightness(70%)"
   },
+  item: {
+    color: "#70c0ff"
+  },
   chunk: {
     height: 200,
     fontSize: '2vw'
+  },
+  row: {
+    display: "flex",
+    justifyContent: "space-between"
   },
   text: {
     position: "absolute",
@@ -59,15 +68,23 @@ export default function Footprint({ item }) {
     <div class={classes.backgroundContainer}>
       <div class={classes.background} />
       <div class={classes.text} style={{fontFamily:'"Montserrat"' }}>
-        <div class={classes.chunk} style={{fontSize: 74}}>The item is {item}</div>
+        <div class={classes.chunk} style={{fontSize: 74}}>The item is <span class={classes.item}>{item}</span></div>
         <div class={classes.chunk}>
           <div>This product releases {items[item].co2} ounce of CO<sub>2</sub> into the environment</div>
-          <div>{items[item].recycle ? `You can ${ items[item].recycle } this item` : "This item is not recyclable"}</div>
+          {items[item].recycle ? <div>You can <span style={{textDecoration: "underline"}}>{items[item].recycle}</span> this item</div> :
+            <div>This item is <span style={{textDecoration: "underline"}}>not</span> recyclable</div>}
         </div>
-        <div class={classes.chunk} style={{"marginTop": 120}}>
+        <div class={classes.chunk} style={{marginTop: 120}}>
           <div>Instead of buying this item, we recommend</div>
-          <div>{items[item].alternatives[0].name} — {items[item].alternatives[0].advantage}</div>
-          <div>{items[item].alternatives[1].name} — {items[item].alternatives[1].advantage}</div>
+          <div class={classes.row}>
+            <div>{items[item].alternatives[0].name} — {items[item].alternatives[0].advantage}</div>
+            <img src={items[item].alternatives[0].image} height="200" />
+          </div>
+          <hr />
+          <div class={classes.row}>
+            <img src={items[item].alternatives[1].image} height="200" />
+            <div style={{textAlign: "right"}}>{items[item].alternatives[1].name} — {items[item].alternatives[1].advantage}</div>
+          </div>
         </div>
       </div>
     </div>

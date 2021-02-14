@@ -44,8 +44,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     fontFamily: "typeface-montserrat"
-    
-
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -116,7 +114,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 64,
     width: "calc(100vw - 240px)",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "#FAFAFA"
   }
 }));
 
