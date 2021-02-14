@@ -12,7 +12,7 @@ const data = [
   {name: 'February', emissions: 400, pv: 2400, amt: 2400},
 ];
 
-const COLORS = ['#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = ['#00C49F', '#FF8042', '#FFBB28'];
 
 const renderLineChart = (
   <LineChart width={400} height={200} data={data}>
