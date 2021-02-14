@@ -6,19 +6,19 @@ import List from '@material-ui/core/List';
 const items = {
   "water bottle": {
     co2: 3,
-    recycle: false,
+    recycle: "recycle", //the recycle variable should either be false, recycle, or decompose.
     good: true,
     carbonFootprint: "A 500ml bottle of water has a total carbon footprint of about 3 ounces of CO2",
     alternatives: [
       {
-        name: "boxed water",
-        advantage: "releases 0.2 ounces of C02",
-        image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066",
-        url: "https://boxedwaterisbetter.com"
+        name: "reusable waterbottle",
+        advantage: "an average person switching saves 217 plastic bottles from the landfill annually",
+        image: "https://www.hydroflask.com/media/catalog/product/cache/9177cfe059281270017bc29637323e6d/w/3/w32ts2-cobalt_1.jpg",
+        url: ""
       },
       {
         name: "boxed water",
-        advantage: "no C02 emissions and 92% recyclable",
+        advantage: "only emits .2 oz of C02 and is 92% recyclable",
         image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066",
         url: "https://boxedwaterisbetter.com"
       }

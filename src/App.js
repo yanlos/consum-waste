@@ -132,44 +132,41 @@ function App() {
 
   const [stats, setStats] = useState([
     {
-      username: 'test',
+      username: 'Eddie Brock',
       score: 50,
       imgsrc: TestImg,
     },
     {
-      username: 'test2',
-      score: 1000,
-      score: 683,
+      username: 'Ben Parker',
+      score: 683
     },
     {
-      username: 'test2',
+      username: 'Jonah Jameson',
       score: 729,
       imgsrc: Pic,
     },
     {
-      username: 'test2',
-      score: 1000,
-      score: 497,
+      username: 'Norman Osborn',
+      score: 957,
       imgsrc: P1,
     },
     {
-      username: 'test2',
+      username: 'Otto Octavious',
       score: 75,
       imgsrc: P2,
     },
     {
-      username: 'test2',
-      score: 999,
+      username: 'Peter Parker',
       score: 516,
       imgsrc: P3,
     },
     {
-      username: 'test2',
+      username: 'Marry Jane',
       score: 250,
       imgsrc: P4,
     },
     {
-      username: 'test2',
+      username: 'Harry Osborn',
       score: 333,
       imgsrc: P5,
     }
