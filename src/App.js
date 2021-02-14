@@ -29,6 +29,7 @@ import Footprint from './Footprint.js';
 import Social from './Social';
 
 import TestImg from './test.jpg';
+import Pic2 from './pic2.jpg';
 
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
@@ -104,8 +105,28 @@ const useStyles = makeStyles((theme) => ({
     width: "calc(100vw - 240px)",
     display: "flex",
     justifyContent: "center"
-  }
+  },
+
+  listItemText:{
+    fontSize:'2em',//Insert your required size
+  },
+
+  // listItemIcon: {
+  //   width:'2',//Insert your required size
+  //   height:"2"
+  // }
+
+  
 }));
+
+const styles = {
+
+  largeIcon: {
+    fontSize:'2em'
+  },
+
+};
+
 
 function App() {
   const classes = useStyles();
@@ -121,28 +142,25 @@ function App() {
 
   const [stats, setStats] = useState([
     {
-      username: 'test1',
+      username: 'test',
       score: 50,
       imgsrc: TestImg,
     },
     {
       username: 'test2',
       score: 1000,
-      imgsrc: TestImg,
     },
     {
       username: 'test2',
       score: 1000,
-      imgsrc: TestImg,
+      imgsrc: Pic2,
     },
     {
       username: 'test2',
       score: 1000,
-      imgsrc: TestImg,
     },    {
       username: 'test2',
       score: 1000,
-      imgsrc: TestImg,
     }
   ]);
 
@@ -171,41 +189,48 @@ function App() {
         }}
         open={open}
       >
+
+
+
         <div className={classes.toolbarIcon}>
           <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon />
+            <ChevronLeftIcon  />
           </IconButton>
         </div>
+
+
+
+
         <Divider />
         <ListItem button onClick={() => setActivePage("dashboard")}>
-          <ListItemIcon>
+          <ListItemIcon iconStyle={styles.largeIcon} >
             <DashboardIcon />
           </ListItemIcon>
-          <ListItemText primary="Dashboard" />
+          <ListItemText classes={{primary:classes.listItemText}} primary="Dashboard" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("scanner")}>
           <ListItemIcon>
             <BackupSharpIcon />
           </ListItemIcon>
-          <ListItemText primary="Scan Products" />
+          <ListItemText classes={{primary:classes.listItemText}} primary="Scan Products" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("footprint")}>
           <ListItemIcon>
             <FingerprintIcon />
           </ListItemIcon>
-          <ListItemText primary="Your Footprint" />
+          <ListItemText classes={{primary:classes.listItemText}} primary="Your Footprint" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("search")}>
           <ListItemIcon>
             <SearchIcon />
           </ListItemIcon>
-          <ListItemText primary="Find Brands" />
+          <ListItemText classes={{primary:classes.listItemText}} primary="Find Brands" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("social")}>
           <ListItemIcon>
             <PeopleIcon />
           </ListItemIcon>
-          <ListItemText primary="Social" />
+          <ListItemText classes={{primary:classes.listItemText}} primary="Social" />
         </ListItem>
         <Divider />
       </Drawer>
