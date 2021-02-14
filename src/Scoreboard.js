@@ -1,14 +1,13 @@
 import React from 'react';
 import ScoreItem from './ScoreItem.js';
-import './css/style.css'
 
 function Scoreboard(props) {
   const stats = props.stats;
 
   const toScoreboard = (list) => list
     .sort(scoreSort)
-    .map((item, i) => 
-      <li> 
+    .map((item, i) =>
+      <li>
         <ScoreItem {...item} rank={i+1}/>
       </li>
     );

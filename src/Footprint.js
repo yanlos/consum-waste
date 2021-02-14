@@ -2,78 +2,63 @@ import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
-import Container from '@material-ui/core/Container';
-import Scanner from './Scanner';
-import Header from './components/header';
-import Features from './components/features';
-import About from './components/about';
-import Products from './components/gallery';
-import Contact from './components/contact';
 
-import Scoreboard from './Scoreboard.js';
-import TestImg from './test.jpg';
-
-function Copyright() {
-  return (
-    null
-  );
-}
-
-const useStyles = makeStyles((theme) => ({
-  appBarSpacer: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    height: '100vh',
-    overflow: 'auto',
+const useStyles = makeStyles(theme => ({
+  backgroundContainer: {
+    width: "100vw",
+    height: "500vh",
+    position: "relative"
   },
-  container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+  background: {
+    width: "100%",
+    height: "100%",
+    backgroundPosition: "0, 0",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    backgroundImage: "url(./intro-bg.jpg)",
+    filter: "brightness(70%)"
+  },
+  text: {
+    position: "absolute",
+    top: "300px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    color: "#efefef",
+    fontWeight: 700,
+    fontSize: 96,
+    backgroundColor: "transparent"
   }
 }));
 
 export default function Footprint({ item }) {
-
   const classes = useStyles();
-  // TODO: Load leaderboard stats here
-  useEffect(() => {
-    console.log('loading stats');
-  }, []);
-  console.log(item)
-  const [stats, setStats] = useState([
-    {
-      username: 'test1',
-      score: 50,
-      imgsrc: TestImg,
-    },
-    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    },
-    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    },
-    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    },    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    }
-  ]);
 
   return (
-    <div>
-      <Header />
-      <Features />
-      <About />
-      <Products />
-      <Contact />
+    <div class={classes.backgroundContainer}>
+      <div class={classes.background} />
+      <div class={classes.text}>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+        <div>sample text</div>
+      </div>
     </div>
   );
 }

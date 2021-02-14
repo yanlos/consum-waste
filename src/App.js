@@ -101,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
   },
   routeContainer: {
     marginLeft: 240,
+    marginTop: 64,
     width: "calc(100vw - 240px)",
     display: "flex",
     justifyContent: "center"
