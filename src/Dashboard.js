@@ -4,11 +4,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Container from '@material-ui/core/Container';
 import Scanner from './Scanner';
-import Header from './components/header';
-import Features from './components/features';
-import About from './components/about';
-import Products from './components/gallery';
-import Contact from './components/contact';
 
 import TitlebarGridList from './FindBrands'
 import Scoreboard from './Scoreboard.js';
@@ -35,10 +30,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Dashboard() {
   const classes = useStyles();
-  // TODO: Load leaderboard stats here
-  useEffect(() => {
-    console.log('loading stats');
-  }, []);
   const [stats, setStats] = useState([
     {
       username: 'test1',
@@ -68,18 +59,6 @@ export default function Dashboard() {
 
   return (
     <div>
-      <Header />
-      <Features />
-      <About />
-      <Products />
-      <CssBaseline />
-      <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <TitlebarGridList/>
-        </Container>
-      </main>
-      <Contact />
     </div>
   );
 }

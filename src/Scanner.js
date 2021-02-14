@@ -2,7 +2,6 @@ import { useState, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import './App.css';
 import Camera from './Camera';
-import './css/style.css'
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -18,7 +17,7 @@ const buttonStyle = {
 };
 const useStyles = makeStyles(theme => ({
   scanner: {
-    marginTop: 100,
+    marginTop: 50,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",

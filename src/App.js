@@ -102,31 +102,12 @@ const useStyles = makeStyles((theme) => ({
   },
   routeContainer: {
     marginLeft: 240,
+    marginTop: 64,
     width: "calc(100vw - 240px)",
     display: "flex",
     justifyContent: "center"
-  },
-
-  listItemText:{
-    fontSize:'2em',//Insert your required size
-  },
-
-  // listItemIcon: {
-  //   width:'2',//Insert your required size
-  //   height:"2"
-  // }
-
-  
+  }
 }));
-
-const styles = {
-
-  largeIcon: {
-    fontSize:'2em'
-  },
-
-};
-
 
 function App() {
   const classes = useStyles();
@@ -216,34 +197,34 @@ function App() {
 
         <Divider />
         <ListItem button onClick={() => setActivePage("dashboard")}>
-          <ListItemIcon iconStyle={styles.largeIcon} >
+          <ListItemIcon>
             <DashboardIcon />
           </ListItemIcon>
-          <ListItemText classes={{primary:classes.listItemText}} primary="Dashboard" />
+          <ListItemText primary="Dashboard" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("scanner")}>
           <ListItemIcon>
             <BackupSharpIcon />
           </ListItemIcon>
-          <ListItemText classes={{primary:classes.listItemText}} primary="Scan Products" />
+          <ListItemText primary="Scan Products" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("footprint")}>
           <ListItemIcon>
             <FingerprintIcon />
           </ListItemIcon>
-          <ListItemText classes={{primary:classes.listItemText}} primary="Your Footprint" />
+          <ListItemText primary="Your Footprint" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("search")}>
           <ListItemIcon>
             <SearchIcon />
           </ListItemIcon>
-          <ListItemText classes={{primary:classes.listItemText}} primary="Find Brands" />
+          <ListItemText primary="Find Brands" />
         </ListItem>
         <ListItem button onClick={() => setActivePage("social")}>
           <ListItemIcon>
             <PeopleIcon />
           </ListItemIcon>
-          <ListItemText classes={{primary:classes.listItemText}} primary="Social" />
+          <ListItemText primary="Social" />
         </ListItem>
         <Divider />
       </Drawer>
