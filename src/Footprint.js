@@ -13,12 +13,14 @@ const items = {
       {
         name: "boxed water",
         advantage: "releases 0.2 ounces of C02",
-        image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066"
+        image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066",
+        url: "https://boxedwaterisbetter.com"
       },
       {
         name: "boxed water",
         advantage: "no C02 emissions and 92% recyclable",
-        image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066"
+        image: "https://cdn.shopify.com/s/files/1/0234/7341/products/500ml-cap-right_800x.jpg?v=1584043066",
+        url: "https://boxedwaterisbetter.com"
       }
     ]
   }
@@ -83,6 +85,18 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "50%",
     padding: "0 25px",
     fontSize: 40
+  },
+  suggestion: {
+    display: "flex",
+    flexDirection: "column",
+    width: 120,
+    cursor: "alias"
+  },
+  link: {
+    fontSize: 18,
+    cursor: "alias",
+    backgroundColor: "white",
+    textAlign: "center"
   }
 }));
 
@@ -111,13 +125,19 @@ export default function Footprint({ item }) {
         <div class={classes.chunk} style={{marginTop: 120}}>
           <div>Instead of buying this item, we recommend</div>
           <div class={classes.row}>
-            <img src={items[item].alternatives[0].image} height="200" />
+            <div class={classes.suggestion}>
+              <img src={items[item].alternatives[0].image} height="200" />
+              <a href={items[item].alternatives[0].url} class={classes.link}>Take a look</a>
+            </div>
             <div style={{textAlign: "right"}}>{items[item].alternatives[0].name} — {items[item].alternatives[0].advantage}</div>
           </div>
           <hr />
           <div class={classes.row}>
             <div>{items[item].alternatives[1].name} — {items[item].alternatives[1].advantage}</div>
-            <img src={items[item].alternatives[1].image} height="200" />
+            <div class={classes.suggestion}>
+              <img src={items[item].alternatives[1].image} height="200" />
+              <a href={items[item].alternatives[1].url} class={classes.link}>Take a look</a>
+            </div>
           </div>
         </div>
       </div>
