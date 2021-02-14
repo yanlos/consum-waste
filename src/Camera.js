@@ -16,11 +16,11 @@ function getMedianOfCodeErrors(decodedCodes) {
 
 function getItem(upc) {
   switch (upc.slice(1)) {
-    case "096619855124": return "water bottle";
-    case "123456788": return "item2";
+    case "098487957696": return "water bottle";
     case "123456787": return "item3";
     case "123456786": return "item4";
     case "123456785": return "item5";
+    case "096619855124": return "maple syrup";
   }
 }
 
