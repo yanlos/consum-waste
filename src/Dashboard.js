@@ -33,15 +33,15 @@ export default function Dashboard() {
     <div>
       <img style={{maxWidth: '100%'}} src='./img/bg2.jpg'/>
       <div class={classes.container}> 
-        <div class={classes.content}>
+        <div class={classes.content} style={{fontFamily:'"Montserrat"' }}>
           
-          <h1 style={{ color: 'green', fontFamily:'"Helvetica Neue"' }}>Our Mission</h1>
+          <h1 style={{ color: 'green'}}>Our Mission</h1>
           <p>
             To promote environmentally friendly brands to a group of environmentally concerned customers, 
             by so doing encourage companies that do not use sustainable packaging to make the switch.
           </p>
 
-          <h2 style={{ color: 'green', fontFamily:'"Helvetica Neue"' }}> Features </h2>
+          <h2 style={{ color: 'green'}}> Features </h2>
           <p>
             Barcode Scanning: Simply scan the barcode on the back of your product to learn 
             more details about the product, such as packaging, CO2 emission levels, and 

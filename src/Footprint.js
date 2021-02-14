@@ -36,7 +36,8 @@ const useStyles = makeStyles(theme => ({
     filter: "brightness(70%)"
   },
   chunk: {
-    height: 450
+    height: 200,
+    fontSize: '2vw'
   },
   text: {
     position: "absolute",
@@ -57,8 +58,8 @@ export default function Footprint({ item }) {
   return (
     <div class={classes.backgroundContainer}>
       <div class={classes.background} />
-      <div class={classes.text}>
-        <div class={classes.chunk} style={{"fontSize": 74}}>The item is {item}</div>
+      <div class={classes.text} style={{fontFamily:'"Montserrat"' }}>
+        <div class={classes.chunk} style={{fontSize: 74}}>The item is {item}</div>
         <div class={classes.chunk}>
           <div>This product releases {items[item].co2} ounce of CO<sub>2</sub> into the environment</div>
           <div>{items[item].recycle ? `You can ${ items[item].recycle } this item` : "This item is not recyclable"}</div>

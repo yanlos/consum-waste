@@ -175,7 +175,7 @@ function App() {
   ]);
 
   return (
-    <div className={"App", classes.root}>
+    <div className={"App", classes.root} >
       <AppBar style={{ background: '#4caf50' }} position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -187,7 +187,7 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title}>
+          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title} style={{fontFamily:'"Montserrat"' }}>
             The Green Revolution
           </Typography>
         </Toolbar>

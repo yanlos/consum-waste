@@ -15,8 +15,8 @@ function Scoreboard(props) {
   const scoreSort = (a,b) => ((a.score < b.score) ? 1 : -1);
 
   return (
-    <ul className="score-list">
-      <div className="score-item">
+    <ul className="score-list" style={{fontFamily:'"Montserrat"' }}>
+      <div className="score-item" >
         <div className="header">
           <strong> RANK </strong>
         </div>
