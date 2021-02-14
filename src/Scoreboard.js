@@ -24,7 +24,7 @@ function Scoreboard(props) {
           <strong> USERNAME </strong>
         </div>
         <div>
-          <strong> SCORE </strong>
+          <strong> KARMA </strong>
         </div>
       </div>
         {toScoreboard(stats)}

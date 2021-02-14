@@ -3,11 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Container from '@material-ui/core/Container';
-import Scanner from './Scanner';
-
-import TitlebarGridList from './FindBrands'
-import Scoreboard from './Scoreboard.js';
-import TestImg from './test.jpg';
 
 function Copyright() {
   return (
@@ -33,32 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Dashboard() {
   const classes = useStyles();
-  const [stats, setStats] = useState([
-    {
-      username: 'test1',
-      score: 50,
-      imgsrc: TestImg,
-    },
-    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    },
-    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    },
-    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    },    {
-      username: 'test2',
-      score: 1000,
-      imgsrc: TestImg,
-    }
-  ]);
 
   return (
     <div>
