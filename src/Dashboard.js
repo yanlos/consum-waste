@@ -70,19 +70,21 @@ export default function Dashboard() {
 
   return (
     <div style={{fontFamily:'"Montserrat"', display:'flex', flexFlow: 'column', alignItems: 'center', paddingTop: '20px'}}>
-      <h1 style={{color: 'green'}}>Your Current Report</h1>
-      <div style={{position: 'relative', padding: '50px', background: 'white'}}>
-        <div style={{display: 'flex', alignItems:'center'}}>
+      <img style={{maxWidth: '100%', marginTop: -25}} src='./img/bg2.jpg'/>
+      <div style={{position: "absolute"}}>
+        <div style={{position: 'relative', marginTop: 75, padding: '20px 50px', background: '#f1f1f1', border: "2px solid green", borderRadius: 5}}>
+          <h1 style={{color: 'green', textAlign: "center"}}>Your Current Report</h1>
+          <div style={{display: 'flex', alignItems:'center'}}>
           <h3>CO2 Conserved (oz)</h3>
           {renderLineChart}
-        </div>
+          </div>
 
-        <div style={{display: 'flex', alignItems:'center'}}>
+          <div style={{display: 'flex', alignItems:'center'}}>
           <h2>Type Of Packaging Scanned</h2>
           {renderPieChart}
+          </div>
         </div>
       </div>
-      <img style={{maxWidth: '100%'}} src='./img/bg2.jpg'/>
       <div class={classes.container}>
         <div class={classes.content}>
           <h1 style={{ color: 'green'}}>Our Mission</h1>

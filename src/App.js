@@ -13,7 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import BackupSharpIcon from '@material-ui/icons/BackupSharp';
-import FingerprintIcon from '@material-ui/icons/Fingerprint';
+import EcoIcon from '@material-ui/icons/Eco';
 import PeopleIcon from '@material-ui/icons/People';
 import SearchIcon from '@material-ui/icons/Search';
 import Divider from '@material-ui/core/Divider';
@@ -198,16 +198,11 @@ function App() {
         open={open}
       >
 
-
-
         <div className={classes.toolbarIcon}>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon  />
           </IconButton>
         </div>
-
-
-
 
         <Divider />
         <ListItem button onClick={() => setActivePage("dashboard")}>
@@ -224,7 +219,7 @@ function App() {
         </ListItem>
         <ListItem button onClick={() => setActivePage("footprint")}>
           <ListItemIcon>
-            <FingerprintIcon />
+            <EcoIcon />
           </ListItemIcon>
           <ListItemText primary="Your Footprint" />
         </ListItem>
@@ -238,7 +233,7 @@ function App() {
           <ListItemIcon>
             <PeopleIcon />
           </ListItemIcon>
-          <ListItemText primary="Social" />
+          <ListItemText primary="Leaderboard" />
         </ListItem>
         <Divider />
       </Drawer>
