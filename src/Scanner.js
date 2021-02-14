@@ -58,7 +58,7 @@ function Scanner({ setActivePage, setItem }) {
         >
           {scanning ? 'Stop Scanning' : 'Start Scanning'}
       </Button>
-      
+
       <img src={Impact} alt="How to make an impact"/>
     </div>
     </main>

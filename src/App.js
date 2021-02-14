@@ -113,7 +113,7 @@ function App() {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
   const [activePage, setActivePage] = useState("dashboard");
-  const [item, setItem] = useState();
+  const [item, setItem] = useState("water bottle");
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -139,7 +139,7 @@ function App() {
     {
       username: 'test2',
       score: 1000,
-    },    
+    },
     {
       username: 'test2',
       score: 75,
