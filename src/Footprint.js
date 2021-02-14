@@ -8,6 +8,7 @@ const items = {
     co2: 3,
     recycle: false,
     good: true,
+    carbonFootprint: "A 500ml bottle of water has a total carbon footprint of about 3 ounces of CO2",
     alternatives: [
       {
         name: "boxed water",
@@ -103,7 +104,7 @@ export default function Footprint({ item }) {
           <img src="./ribbon.png" class={classes.ribbon} />
           <div class={classes.ribbonText}>What is the carbon footprint of {item}?</div>
           <div class={classes.row}>
-            <div>A 500ml bottle of water has a total carbon footprint of about {items[item].co2} ounces of CO2</div>
+            <div>{items[item].carbonFootprint}</div>
             <div class={classes.circle}><span style={{fontSize: 120, color: "#ff3070"}}>{items[item].co2}</span>oz</div>
           </div>
         </div>
