@@ -18,7 +18,7 @@ function getItem(upc) {
   switch (upc.slice(1)) {
     case "098487957696": return "water bottle";
     case "096619855124": return "water bottle";
-    case "123456787": return "item3";
+    case "611269991000": return "Red Bull";
     case "123456786": return "item4";
     case "123456785": return "item5";
   }
