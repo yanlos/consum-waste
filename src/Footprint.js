@@ -2,11 +2,13 @@ import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
+import rec from './footprintPics/rec.png'; // with import
+
 
 const items = {
   "water bottle": {
-    co2: 10,
-    recycle: false,
+    co2: 3,
+    recycle: "recycle", //the recycle variable should either be false, recycle, or decompose,.
     alternatives: [
       {
         name: "boxed water",
@@ -18,6 +20,10 @@ const items = {
       }
     ]
   }
+
+
+  
+
 }
 
 const useStyles = makeStyles(theme => ({
@@ -58,13 +64,17 @@ export default function Footprint({ item }) {
   return (
     <div class={classes.backgroundContainer}>
       <div class={classes.background} />
+
       <div class={classes.text} style={{fontFamily:'"Montserrat"' }}>
-        <div class={classes.chunk} style={{fontSize: 74}}>The item is {item}</div>
+        <div class={classes.chunk} style={{fontSize: 66}}>Ditch the {item}!</div>
         <div class={classes.chunk}>
-          <div>This product releases {items[item].co2} ounce of CO<sub>2</sub> into the environment</div>
-          <div>{items[item].recycle ? `You can ${ items[item].recycle } this item` : "This item is not recyclable"}</div>
+          <div>This product releases {items[item].co2} ounces of CO<sub>2</sub> into the environment.</div>
+          <br></br>
+          <div>{items[item].recycle ? `You can ${ items[item].recycle } this item.` : "This item is not recyclable"}</div>
+
         </div>
         <div class={classes.chunk} style={{"marginTop": 120}}>
+
           <div>Instead of buying this item, we recommend</div>
           <div>{items[item].alternatives[0].name} — {items[item].alternatives[0].advantage}</div>
           <div>{items[item].alternatives[1].name} — {items[item].alternatives[1].advantage}</div>

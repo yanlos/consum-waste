@@ -29,13 +29,7 @@ import Footprint from './Footprint.js';
 import Social from './Social';
 
 import TestImg from './test.jpg';
-import Pic from './pic2.jpg';
-
-import P1 from './pexels-p1.jpg';
-import P2 from './pexels-p2.jpg';
-import P3 from './pexels-p3.jpg';
-import P4 from './pexels-p4.jpg';
-import P5 from './pexels-p5.jpg';
+import Pic2 from './pic2.jpg';
 
 import "typeface-montserrat";
 
@@ -43,7 +37,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    fontFamily: "typeface-montserrat"
+    // fontFamily: "typeface-montserrat"
     
 
   },
@@ -140,42 +134,37 @@ function App() {
     },
     {
       username: 'test2',
-      score: 683,
+      score: 1000,
     },
     {
       username: 'test2',
-      score: 729,
-      imgsrc: Pic,
+      score: 1000,
+      imgsrc: Pic2,
     },
     {
       username: 'test2',
-      score: 497,
-      imgsrc: P1,
+      score: 1000,
     },
     {
       username: 'test2',
       score: 75,
-      imgsrc: P2,
     },
     {
       username: 'test2',
-      score: 516,
-      imgsrc: P3,
+      score: 999,
     },
     {
       username: 'test2',
       score: 250,
-      imgsrc: P4,
     },
     {
       username: 'test2',
       score: 333,
-      imgsrc: P5,
     }
   ]);
 
   return (
-    <div className={"App", classes.root} >
+    <div className={"App", classes.root}>
       <AppBar style={{ background: '#4caf50' }} position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -187,8 +176,8 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title} style={{fontFamily:'"Montserrat"' }}>
-            The Green Revolution
+          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title}>
+            The Green Awakening
           </Typography>
         </Toolbar>
       </AppBar>
