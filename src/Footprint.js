@@ -2,13 +2,12 @@ import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
-import rec from './footprintPics/rec.png'; // with import
-
 
 const items = {
   "water bottle": {
-    co2: 3,
-    recycle: "recycle", //the recycle variable should either be false, recycle, or decompose,.
+    co2: 10,
+    recycle: false,
+    good: true,
     alternatives: [
       {
         name: "boxed water",
@@ -22,10 +21,6 @@ const items = {
       }
     ]
   }
-
-
-  
-
 }
 
 const useStyles = makeStyles(theme => ({
@@ -73,12 +68,12 @@ export default function Footprint({ item }) {
   return (
     <div class={classes.backgroundContainer}>
       <div class={classes.background} />
-
-      <div class={classes.text} style={{fontFamily:'"Montserrat"' }}>
-        <div class={classes.chunk} style={{fontSize: 74}}>The item is <span class={classes.item}>{item}</span></div>
+      <div class={classes.text} style={{fontFamily: "Montserrat"}}>
+        {items[item].good ? <div class={classes.chunk} style={{fontSize: 66}}>Ditch <span class={classes.item}>{item}</span>!</div> :
+          <div class={classes.chunk} style={{fontSize: 66}}><span class={classes.item}>{item}</span> is a sustainable item!</div>}
         <div class={classes.chunk}>
           <div>This product releases {items[item].co2} ounce of CO<sub>2</sub> into the environment</div>
-          {items[item].recycle ? <div>You can <span style={{textDecoration: "underline"}}>{items[item].recycle}</span> this item.</div> :
+          {items[item].recycle ? <div>You can <span style={{textDecoration: "underline"}}>{items[item].recycle}</span> this item</div> :
             <div>This item is <span style={{textDecoration: "underline"}}>not</span> recyclable</div>}
         </div>
         <div class={classes.chunk} style={{marginTop: 120}}>
