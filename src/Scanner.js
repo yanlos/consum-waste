@@ -8,6 +8,8 @@ import clsx from 'clsx';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
+import Impact from './impact.png';
+
 const buttonStyle = {
   fontSize: "20px",
   padding: "30px",
@@ -56,6 +58,8 @@ function Scanner({ setActivePage, setItem }) {
         >
           {scanning ? 'Stop Scanning' : 'Start Scanning'}
       </Button>
+      
+      <img src={Impact} alt="How to make an impact"/>
     </div>
     </main>
   );

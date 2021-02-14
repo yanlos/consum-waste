@@ -172,7 +172,7 @@ function App() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h4" color="inherit" noWrap className={classes.title}>
-            CONSUM WASTE
+            EMission
           </Typography>
         </Toolbar>
       </AppBar>
