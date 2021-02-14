@@ -29,7 +29,12 @@ import Footprint from './Footprint.js';
 import Social from './Social';
 
 import TestImg from './test.jpg';
-import Pic2 from './pic2.jpg';
+import Pic from './pic2.jpg';
+import P1 from './pexels-p1.jpg';
+import P2 from './pexels-p2.jpg';
+import P3 from './pexels-p3.jpg';
+import P4 from './pexels-p4.jpg';
+import P5 from './pexels-p5.jpg';
 
 import "typeface-montserrat";
 
@@ -134,31 +139,39 @@ function App() {
     {
       username: 'test2',
       score: 1000,
+      score: 683,
+    },
+    {
+      username: 'test2',
+      score: 729,
+      imgsrc: Pic,
     },
     {
       username: 'test2',
       score: 1000,
-      imgsrc: Pic2,
-    },
-    {
-      username: 'test2',
-      score: 1000,
+      score: 497,
+      imgsrc: P1,
     },
     {
       username: 'test2',
       score: 75,
+      imgsrc: P2,
     },
     {
       username: 'test2',
       score: 999,
+      score: 516,
+      imgsrc: P3,
     },
     {
       username: 'test2',
       score: 250,
+      imgsrc: P4,
     },
     {
       username: 'test2',
       score: 333,
+      imgsrc: P5,
     }
   ]);
 
