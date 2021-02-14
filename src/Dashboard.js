@@ -4,13 +4,15 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Container from '@material-ui/core/Container';
 
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, PieChart, Pie, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, PieChart, Pie, Cell } from 'recharts';
 const data = [
   {name: 'November', emissions: 180, pv: 2400, amt: 2400},
   {name: 'December', emissions: 210, pv: 2400, amt: 2400},
   {name: 'January', emissions: 270, pv: 2400, amt: 2400},
   {name: 'February', emissions: 400, pv: 2400, amt: 2400},
 ];
+
+const COLORS = ['#00C49F', '#FFBB28', '#FF8042'];
 
 const renderLineChart = (
   <LineChart width={400} height={200} data={data}>
@@ -32,14 +34,18 @@ const data01 = [
     "value": 23
   },
   {
-    "name": "Nuetral",
+    "name": "Neutral",
     "value": 25
   }
 ];
 
 const renderPieChart = (
   <PieChart width={200} height={200}>
-    <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#4287f5" label/>
+    <Pie 
+      data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} innerRadius={10} fill="#4287f5" label
+    >
+        {data.map((entry,index) => <Cell fill={COLORS[index % COLORS.length]}/>)}
+    </Pie>
     <Tooltip/>
   </PieChart>
 );
