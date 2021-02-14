@@ -9,7 +9,9 @@
 } */
 
 #search-products {
+  width: 50% !important ;
   margin-top: 5px;
+  margin-bottom: 55px;
 }
 
 a {

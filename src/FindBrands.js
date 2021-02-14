@@ -204,8 +204,7 @@ export default function TitlebarGridList() {
                 let tile = tileData[0];
                 
             return (
-                <div>
-                    <GridList cellHeight={180} className={classes.gridList}>
+                    <GridList cellHeight={300} className={classes.gridList} cols={1}>
                     {/* <GridListTile key="Subheader" cols={2} style={{ height: 'auto', background: '#357a38' }}>
                         {/* <ListSubheader className = {classes.words} component="div">Our Featured Sustainable Products</ListSubheader> */}
                         {/* <Typography component="h1"> Our Featured Sustainable Products </Typography> */}
@@ -225,7 +224,6 @@ export default function TitlebarGridList() {
                         </GridListTile>
                     ))}
                 </GridList>
-                </div>
             );
         }
 
@@ -234,7 +232,7 @@ export default function TitlebarGridList() {
             
         return (
             <div>
-                <GridList cellHeight={180} className={classes.gridList}>
+                <GridList cellHeight={300} className={classes.gridList} cols={1}>
                 <GridListTile key={tile.img}>
                             <img src={tile.img} alt={tile.title} />
                             <GridListTileBar
@@ -255,7 +253,7 @@ export default function TitlebarGridList() {
     else if (value == 'Foods & Snacks') {
         return (
             <div>
-                <GridList cellHeight={180} className={classes.gridList}>
+                <GridList cellHeight={300} className={classes.gridList} cols={1}>
                 {/* <GridListTile key="Subheader" cols={2} style={{ height: 'auto', background: '#357a38' }}>
                     {/* <ListSubheader className = {classes.words} component="div">Our Featured Sustainable Products</ListSubheader> */}
                     {/* <Typography component="h1"> Our Featured Sustainable Products </Typography> */}
