@@ -158,9 +158,22 @@ function App() {
     {
       username: 'test2',
       score: 1000,
-    },    {
+    },    
+    {
       username: 'test2',
-      score: 1000,
+      score: 75,
+    },
+    {
+      username: 'test2',
+      score: 999,
+    },
+    {
+      username: 'test2',
+      score: 250,
+    },
+    {
+      username: 'test2',
+      score: 333,
     }
   ]);
 
