@@ -30,7 +30,6 @@ import Social from './Social';
 
 import TestImg from './test.jpg';
 import Pic from './pic2.jpg';
-
 import P1 from './pexels-p1.jpg';
 import P2 from './pexels-p2.jpg';
 import P3 from './pexels-p3.jpg';
@@ -44,8 +43,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     fontFamily: "typeface-montserrat"
-    
-
   },
   toolbar: {
     paddingRight: 24, // keep right padding when drawer closed
@@ -116,7 +113,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 64,
     width: "calc(100vw - 240px)",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "#FAFAFA"
   }
 }));
 
@@ -140,6 +138,7 @@ function App() {
     },
     {
       username: 'test2',
+      score: 1000,
       score: 683,
     },
     {
@@ -149,6 +148,7 @@ function App() {
     },
     {
       username: 'test2',
+      score: 1000,
       score: 497,
       imgsrc: P1,
     },
@@ -159,6 +159,7 @@ function App() {
     },
     {
       username: 'test2',
+      score: 999,
       score: 516,
       imgsrc: P3,
     },
@@ -175,7 +176,7 @@ function App() {
   ]);
 
   return (
-    <div className={"App", classes.root} >
+    <div className={"App", classes.root}>
       <AppBar style={{ background: '#4caf50' }} position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -187,8 +188,8 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title} style={{fontFamily:'"Montserrat"' }}>
-            The Green Revolution
+          <Typography component="h1" variant="h4" color="inherit"  noWrap className={classes.title}>
+            The Green Awakening
           </Typography>
         </Toolbar>
       </AppBar>
